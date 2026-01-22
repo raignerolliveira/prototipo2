@@ -88,10 +88,10 @@ export function HomePageFunctional({
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
       {/* Header */}
-      <header className="bg-primary text-primary-foreground py-4 px-6 shadow-sm">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <header className="bg-primary text-primary-foreground py-4 px-4 sm:px-6 shadow-sm">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <h1 className="text-xl">ServiçoPRO</h1>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4 self-end sm:self-auto">
             <div className="flex items-center gap-2">
               <User className="w-5 h-5" />
               <span className="text-sm">{currentUser?.name}</span>
@@ -102,23 +102,23 @@ export function HomePageFunctional({
               className="text-primary-foreground hover:bg-primary/90"
               onClick={handleLogout}
             >
-              <LogOut className="w-4 h-4 mr-2" />
-              Sair
+              <LogOut className="w-4 h-4 sm:mr-2" />
+              <span className="hidden sm:inline">Sair</span>
             </Button>
           </div>
         </div>
       </header>
 
       {/* Search Section */}
-      <div className="bg-primary text-primary-foreground py-12 px-6">
+      <div className="bg-primary text-primary-foreground py-8 sm:py-12 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl mb-2 text-center">Encontre o profissional ideal</h2>
-          <p className="text-center text-primary-foreground/80 mb-8">
+          <h2 className="text-2xl sm:text-3xl mb-2 text-center">Encontre o profissional ideal</h2>
+          <p className="text-center text-primary-foreground/80 mb-6 sm:mb-8 text-sm sm:text-base">
             Conectamos você aos melhores profissionais de serviços residenciais
           </p>
           
-          <div className="bg-white rounded-lg shadow-xl p-6">
-            <div className="grid md:grid-cols-12 gap-4">
+          <div className="bg-white rounded-lg shadow-xl p-4 sm:p-6">
+            <div className="grid md:grid-cols-12 gap-3 sm:gap-4">
               <div className="md:col-span-7">
                 <label className="text-sm text-gray-700 mb-2 block">Qual serviço precisa?</label>
                 <div className="relative">
@@ -165,14 +165,14 @@ export function HomePageFunctional({
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-6 py-8">
-        <div className="grid lg:grid-cols-12 gap-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+        <div className="grid lg:grid-cols-12 gap-4 sm:gap-6">
           {/* Filters Sidebar */}
           <div className="lg:col-span-3">
-            <Card className="p-6 sticky top-6">
-              <div className="flex items-center gap-2 mb-6">
+            <Card className="p-4 sm:p-6 lg:sticky lg:top-6">
+              <div className="flex items-center gap-2 mb-4 sm:mb-6">
                 <Sliders className="w-5 h-5 text-primary" />
-                <h3 className="text-lg">Filtros</h3>
+                <h3 className="text-base sm:text-lg">Filtros</h3>
               </div>
               
               <div className="space-y-6">

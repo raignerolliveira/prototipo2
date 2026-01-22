@@ -241,18 +241,18 @@ export function AuthPageFunctional({ onLogin }: { onLogin: () => void }) {
                   />
                 </div>
                 
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between flex-wrap gap-2">
                   <div className="flex items-center space-x-2">
                     <Checkbox id="remember" />
                     <label
                       htmlFor="remember"
-                      className="text-sm cursor-pointer"
+                      className="text-sm cursor-pointer whitespace-nowrap"
                     >
                       Lembrar de mim
                     </label>
                   </div>
                   
-                  <a href="#" className="text-sm text-primary hover:underline">
+                  <a href="#" className="text-sm text-primary hover:underline whitespace-nowrap">
                     Esqueceu a senha?
                   </a>
                 </div>
